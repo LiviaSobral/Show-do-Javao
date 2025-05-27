@@ -4,6 +4,8 @@
  */
 package com.mycompany.show.view;
 
+import com.mycompany.show.controller.PerguntaController;
+
 /**
  *
  * @author TALITANAIBERTDACOSTA
@@ -15,6 +17,7 @@ public class tela2 extends javax.swing.JFrame {
      */
     public tela2() {
         initComponents();
+        
     }
 
     /**

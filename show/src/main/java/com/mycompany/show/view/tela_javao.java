@@ -131,7 +131,8 @@ public class tela_javao extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botãoEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botãoEntrarActionPerformed
-        // TODO add your handling code here:
+        new tela2().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botãoEntrarActionPerformed
 
     /**
