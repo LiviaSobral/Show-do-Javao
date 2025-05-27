@@ -268,6 +268,7 @@ public class tela2 extends javax.swing.JFrame {
         }else{
             this.dispose();
         }        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
