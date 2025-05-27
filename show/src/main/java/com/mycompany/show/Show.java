@@ -13,20 +13,7 @@ import com.mycompany.show.view.tela_javao;
  */
 public class Show {
 
-    public static void main(String[] args) {
-        String[] respostas1 = {"Põe batata", "Põe Farofa", "Põe peixe", "Não põe nada"};
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        
-        
+    public static void main(String[] args) {        
         new tela_javao().setVisible(true);
     }
 }

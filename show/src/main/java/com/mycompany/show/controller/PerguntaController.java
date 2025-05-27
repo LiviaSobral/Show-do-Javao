@@ -25,7 +25,8 @@ public class PerguntaController {
     }
     
     public static Pergunta selecionar(){
-        int num = (int)(Math.random() * 10);
+        if(!perguntas.isEmpty()){
+            int num = (int)(Math.random() * 10);
         if(perguntas.get(num) == null){
             do{
                 num = (int)(Math.random() * 10);                
@@ -35,5 +36,8 @@ public class PerguntaController {
         Pergunta pergunta = perguntas.get(num);
         perguntas.remove(num);
         return pergunta;
+        }else{
+            return null;
+        }        
     }
 }

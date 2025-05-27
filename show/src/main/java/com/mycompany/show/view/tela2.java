@@ -257,13 +257,17 @@ public class tela2 extends javax.swing.JFrame {
     }
     
     private void achaPergunta(){
-        Pergunta pergunt = PerguntaController.selecionar();
-        pergunta.setText(pergunt.getPergunta());
-        botao1.setText(pergunt.getRespostas()[0]);
-        botao2.setText(pergunt.getRespostas()[1]);
-        botao3.setText(pergunt.getRespostas()[2]);
-        botao4.setText(pergunt.getRespostas()[3]);
-        num = pergunt.getOpção();
+        if(PerguntaController.selecionar() != null){
+            Pergunta pergunt = PerguntaController.selecionar();
+            pergunta.setText(pergunt.getPergunta());
+            botao1.setText(pergunt.getRespostas()[0]);
+            botao2.setText(pergunt.getRespostas()[1]);
+            botao3.setText(pergunt.getRespostas()[2]);
+            botao4.setText(pergunt.getRespostas()[3]);
+            num = pergunt.getOpção();
+        }else{
+            this.dispose();
+        }        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
