@@ -5,6 +5,7 @@
 package com.mycompany.show.controller;
 
 import com.mycompany.show.model.Pergunta;
+import static java.awt.image.ImageObserver.WIDTH;
 import java.util.ArrayList;
 
 /**
@@ -12,11 +13,16 @@ import java.util.ArrayList;
  * @author LIVIAHELOISAALVESSOB
  */
 public class PerguntaController {
-    public static ArrayList<Pergunta> perguntas;
+    private static ArrayList<Pergunta> perguntas;
+
+       
     
     public static Pergunta adicionar(String pergunta, String[] respostas, int correta){
         Pergunta perg = new Pergunta(correta,pergunta,respostas);
         perguntas.add(perg);
         return perg;
+    }
+    public static Pergunta selecionar(){
+        return perguntas.get((int)(Math.random() * 10));
     }
 }
