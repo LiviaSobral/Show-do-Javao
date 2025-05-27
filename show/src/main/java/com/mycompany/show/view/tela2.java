@@ -78,8 +78,9 @@ public class tela2 extends javax.swing.JFrame {
                 .addContainerGap(44, Short.MAX_VALUE))
         );
 
+        botao1.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(botao1);
-        botao1.setForeground(new java.awt.Color(255, 255, 0));
+        botao1.setForeground(new java.awt.Color(255, 255, 255));
         botao1.setText("1");
         botao1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,16 +88,19 @@ public class tela2 extends javax.swing.JFrame {
             }
         });
 
+        botao2.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(botao2);
-        botao2.setForeground(new java.awt.Color(255, 255, 0));
+        botao2.setForeground(new java.awt.Color(255, 255, 255));
         botao2.setText("2");
 
+        botao3.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(botao3);
-        botao3.setForeground(new java.awt.Color(255, 255, 0));
+        botao3.setForeground(new java.awt.Color(255, 255, 255));
         botao3.setText("3");
 
+        botao4.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(botao4);
-        botao4.setForeground(new java.awt.Color(255, 255, 0));
+        botao4.setForeground(new java.awt.Color(255, 255, 255));
         botao4.setText("4");
 
         jButton1.setBackground(new java.awt.Color(0, 102, 0));
@@ -111,10 +115,8 @@ public class tela2 extends javax.swing.JFrame {
         jLabel2.setText(".");
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\git\\Show-do-Javao\\tumblr_mgtzqiFqqb1rrftcdo1_250.gif")); // NOI18N
-        jLabel3.setText("jLabel3");
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\git\\Show-do-Javao\\82ab054e-503f-4da0-84de-15a34fdcb562_mlvinedancebig.gif")); // NOI18N
-        jLabel4.setText("jLabel4");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -255,12 +257,18 @@ public class tela2 extends javax.swing.JFrame {
     }
     
     private void achaPergunta(){
-        Pergunta pergunt = PerguntaController.selecionar();
-        pergunta.setText(pergunt.getPergunta());
-        botao1.setText(pergunt.getRespostas()[0]);
-        botao1.setText(pergunt.getRespostas()[1]);
-        botao1.setText(pergunt.getRespostas()[2]);
-        botao1.setText(pergunt.getRespostas()[3]);
+        if(PerguntaController.selecionar() != null){
+            Pergunta pergunt = PerguntaController.selecionar();
+            pergunta.setText(pergunt.getPergunta());
+            botao1.setText(pergunt.getRespostas()[0]);
+            botao2.setText(pergunt.getRespostas()[1]);
+            botao3.setText(pergunt.getRespostas()[2]);
+            botao4.setText(pergunt.getRespostas()[3]);
+            num = pergunt.getOpção();
+        }else{
+            this.dispose();
+        }        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

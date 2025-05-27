@@ -16,7 +16,7 @@ import java.util.Set;
  * @author LIVIAHELOISAALVESSOB
  */
 public class PerguntaController {
-    private static ArrayList<Pergunta> perguntas;
+    private static ArrayList<Pergunta> perguntas = new ArrayList<>();
     
     public static Pergunta adicionar(String pergunta, String[] respostas, int correta){
         Pergunta perg = new Pergunta(correta,pergunta,respostas);
@@ -25,9 +25,19 @@ public class PerguntaController {
     }
     
     public static Pergunta selecionar(){
-        int num = (int)(Math.random() * 10);
+        if(!perguntas.isEmpty()){
+            int num = (int)(Math.random() * 10);
+        if(perguntas.get(num) == null){
+            do{
+                num = (int)(Math.random() * 10);                
+            }
+            while(perguntas.get(num) == null);
+        }
         Pergunta pergunta = perguntas.get(num);
         perguntas.remove(num);
         return pergunta;
+        }else{
+            return null;
+        }        
     }
 }

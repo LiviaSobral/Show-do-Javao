@@ -4,6 +4,8 @@
  */
 package com.mycompany.show.view;
 
+import com.mycompany.show.controller.PerguntaController;
+
 /**
  *
  * @author TALITANAIBERTDACOSTA
@@ -15,6 +17,17 @@ public class tela_javao extends javax.swing.JFrame {
      */
     public tela_javao() {
         initComponents();
+        String[] respostas1 = {"Põe batata", "Põe Farofa", "Põe peixe", "Não põe nada"};
+        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
+        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
+        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
+        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
+        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
+        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
+        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
+        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
+        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
+        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
     }
 
     /**
