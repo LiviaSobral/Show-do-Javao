@@ -219,6 +219,7 @@ public class tela2 extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(this, "Selecione uma resposta");
         }
+        achaPergunta();  
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -266,6 +267,7 @@ public class tela2 extends javax.swing.JFrame {
             botao4.setText(pergunt.getRespostas()[3]);
             num = pergunt.getOpção();
         }else{
+            new tela3().setVisible(true);
             this.dispose();
         }        
 

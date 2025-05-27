@@ -18,16 +18,27 @@ public class tela_javao extends javax.swing.JFrame {
     public tela_javao() {
         initComponents();
         String[] respostas1 = {"Põe batata", "Põe Farofa", "Põe peixe", "Não põe nada"};
+        String[] respostas2 = {"Edward Jenner", "Louis Pasteur", "Albert Einstein", "Socrates"};
+        String[] respostas3 = {"Brasileiro indicado ao Prêmio Nobel da Paz 2018", "Militar e político brasileiro", "Escritor e poeta português", "Escritor e poeta espanhol"};
+        String[] respostas4 = {"Doom 2", "Call of Duty", "Alienígena: Isolamento", "Mario kart"};
+        String[] respostas5 = {"Java", "Jogos Rockstar", "Bethesda", "Pythom"};
+        String[] respostas6 = {"Halo ce", "Fallout: new vegas", "the Elder Scrolls IV: Oblivion", "The Elder Scrolls V: Skyrim"};
+        String[] respostas7 = {"Ta bom", "22,8 °C e uma máxima de 30,2 °C", "-22,8 °C e uma máxima de 30,2 °C", "3.7 °C e uma máxima de 10.2 °C"};
+        String[] respostas8 = {"Deus me livre", "SIM", "Misericordia", "Não"};
+        String[] respostas9 = {"1.6.4", "1.7.10", "1.8.2", "1.5.2"};
+        String[] respostas10 = {"Os dinosauros", "A galinha", "O ovo", "Os dois"};
+        
+        PerguntaController.adicionar("Quem foi o inventor da vacina?", respostas1, 4);
         PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
+        PerguntaController.adicionar("Quem foi o inventor da vacina?", respostas2, 1);
+        PerguntaController.adicionar("Quem é Luiz Gabriel Tiago?", respostas3, 1);
+        PerguntaController.adicionar("Em qual jogo de terror espacial os jogadores escapam de um perigoso Xenomorfo?", respostas4, 3);
+        PerguntaController.adicionar("Qual grande desenvolvedor estava envolvido na controvérsia do “Café Quente”?", respostas5, 2);
+        PerguntaController.adicionar("“Arrow to the Knee” é uma frase associada a qual RPG da Bethesda?", respostas6, 4);
+        PerguntaController.adicionar("Considerando o estado politico da Indonesia fale sobre o clima", respostas7, 1);
+        PerguntaController.adicionar("Você gosta de Java", respostas8, 2);
+        PerguntaController.adicionar("Qual a versão do minecraft onde eles adicionaram gatos", respostas9, 4);
+        PerguntaController.adicionar("quem naceu primeiro o ovo ou a galinha", respostas10, 1);
     }
 
     /**
