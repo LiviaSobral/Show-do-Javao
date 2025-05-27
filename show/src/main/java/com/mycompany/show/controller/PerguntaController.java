@@ -5,8 +5,11 @@
 package com.mycompany.show.controller;
 
 import com.mycompany.show.model.Pergunta;
+import com.mycompany.show.model.User;
 import static java.awt.image.ImageObserver.WIDTH;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
@@ -14,15 +17,17 @@ import java.util.ArrayList;
  */
 public class PerguntaController {
     private static ArrayList<Pergunta> perguntas;
-
-       
     
     public static Pergunta adicionar(String pergunta, String[] respostas, int correta){
         Pergunta perg = new Pergunta(correta,pergunta,respostas);
         perguntas.add(perg);
         return perg;
     }
+    
     public static Pergunta selecionar(){
-        return perguntas.get((int)(Math.random() * 10));
+        int num = (int)(Math.random() * 10);
+        Pergunta pergunta = perguntas.get(num);
+        perguntas.remove(num);
+        return pergunta;
     }
 }
