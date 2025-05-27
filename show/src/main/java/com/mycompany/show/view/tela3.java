@@ -34,9 +34,10 @@ public class tela3 extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\TALITANAIBERTDACOSTA\\Pictures\\144903edcb9af8f7fa4f83d4df70f6a9 (1).gif")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\git\\Show-do-Javao\\144903edcb9af8f7fa4f83d4df70f6a9.gif")); // NOI18N
 
         mensagem.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
+        mensagem.setForeground(new java.awt.Color(255, 255, 255));
         mensagem.setText("mensagem:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
