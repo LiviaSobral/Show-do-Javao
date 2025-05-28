@@ -222,7 +222,7 @@ public class tela2 extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "RESPOSTA CORRETA");
                 UserController.adicionarPontos(user);
             }else{
-                JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");
+                JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");                
                 UserController.derrota(user);
             }
         }else{
@@ -267,6 +267,10 @@ public class tela2 extends javax.swing.JFrame {
     }
     
     private void achaPergunta(){
+        if(user.isErro()){
+            new tela3(user).setVisible(true);
+            this.dispose();
+        }
         if(PerguntaController.selecionar() != null){
             Pergunta pergunt = PerguntaController.selecionar();
             pergunta.setText(pergunt.getPergunta());
