@@ -200,8 +200,6 @@ public class tela2 extends javax.swing.JFrame {
             }else{
                 JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");
                 UserController.derrota(user);
-                new tela3(user).setVisible(true);
-            this.dispose();
             }                
         }else if(botao2.isSelected()){
             if(num == 2){
@@ -210,8 +208,6 @@ public class tela2 extends javax.swing.JFrame {
             }else{
                 JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");
                 UserController.derrota(user);
-                new tela3(user).setVisible(true);
-            this.dispose();
             }
         }else if(botao3.isSelected()){
             if(num == 3){
@@ -220,18 +216,14 @@ public class tela2 extends javax.swing.JFrame {
             }else{
                 JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");
                 UserController.derrota(user);
-                new tela3(user).setVisible(true);
-            this.dispose();
             }
         }else if(botao4.isSelected()){
             if(num == 4){
                 JOptionPane.showMessageDialog(this, "RESPOSTA CORRETA");
                 UserController.adicionarPontos(user);
             }else{
-                JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");
+                JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");                
                 UserController.derrota(user);
-                new tela3(user).setVisible(true);
-            this.dispose();
             }
         }else{
             JOptionPane.showMessageDialog(this, "Selecione uma resposta");
@@ -275,6 +267,10 @@ public class tela2 extends javax.swing.JFrame {
     }
     
     private void achaPergunta(){
+        if(user.isErro()){
+            new tela3(user).setVisible(true);
+            this.dispose();
+        }
         if(PerguntaController.selecionar() != null){
             Pergunta pergunt = PerguntaController.selecionar();
             pergunta.setText(pergunt.getPergunta());
