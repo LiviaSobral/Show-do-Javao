@@ -31,6 +31,8 @@ por final rode a classe Show no netBeans
 
 ou alternativamente pode-se clicar na classe e apertar em conjunto shift + f6
 
+Caso não tenha NetBeans no seu computador Use este Video para Instalar ele: https://www.youtube.com/watch?v=TA1cXQXj-4Y
+
 ## 📚 Descrição
 
 o nosso jogo do javão e um jogo que contem uma sequencia de perguntas,
