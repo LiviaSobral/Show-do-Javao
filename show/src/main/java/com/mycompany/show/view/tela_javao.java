@@ -29,7 +29,6 @@ public class tela_javao extends javax.swing.JFrame {
         String[] respostas10 = {"Os dinosauros", "A galinha", "O ovo", "Os dois"};
         
         PerguntaController.adicionar("Complete o trecho da musica: Põe tapioca Põe, farinha d'água, Põe açúcar ....", respostas1, 4);
-        PerguntaController.adicionar("Quem foi o inventor da vacina?", respostas2, 4);
         PerguntaController.adicionar("Quem foi o inventor da vacina?", respostas2, 1);
         PerguntaController.adicionar("Quem é Luiz Gabriel Tiago?", respostas3, 1);
         PerguntaController.adicionar("Em qual jogo de terror espacial os jogadores escapam de um perigoso Xenomorfo?", respostas4, 3);
