@@ -34,6 +34,6 @@ ou alternativamente pode-se clicar na classe e apertar em conjunto shift + f6
 ## 📚 Descrição
 
 o nosso jogo do javão e um jogo que contem uma sequencia de perguntas,
-cada pergunta e equivalente 10 pontos cada uma delas,
-o nivel das perguntas e um pouco elevadas 
-
+cada pergunta e equivalente 10 pontos cada uma delas, as perguntas são muito dificeis, 
+podem ate mesmo te deixar encucado com a tamanha dificuldade de tais questões. 
+Porem CONTENHA-SE ao errar uma questão você IMEDIATAMENTE PERDE!!!!
