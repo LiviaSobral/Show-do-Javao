@@ -6,7 +6,7 @@
 
 ## 🚀 Como executar
 crie uma pasta git no disco C
-depois use o git clone para copiar o repositorio
+depois use o git clone para copiar o repositorio.
 abrir netBeans, rodar a classe show
 
 
