@@ -26,12 +26,12 @@ public class PerguntaController {
     }
     
     public static Pergunta selecionar(){   
-        Pergunta pergunta = perguntas.get(numero);
         if(numero < 10){            
+            Pergunta pergunta = perguntas.get(numero);
             numero ++;
+            return pergunta;
         }else{
             return null;
-        }        
-        return pergunta;
+        }                
     }
 }
