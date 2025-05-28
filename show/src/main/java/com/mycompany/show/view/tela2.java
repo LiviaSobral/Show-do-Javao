@@ -271,8 +271,8 @@ public class tela2 extends javax.swing.JFrame {
             new tela3(user).setVisible(true);
             this.dispose();
         }
-        if(PerguntaController.selecionar() != null){
-            Pergunta pergunt = PerguntaController.selecionar();
+        Pergunta pergunt = PerguntaController.selecionar();
+        if(pergunt != null){            
             pergunta.setText(pergunt.getPergunta());
             botao1.setText(pergunt.getRespostas()[0]);
             botao2.setText(pergunt.getRespostas()[1]);
