@@ -5,6 +5,7 @@
 package com.mycompany.show.view;
 
 import com.mycompany.show.controller.PerguntaController;
+import com.mycompany.show.controller.UserController;
 import com.mycompany.show.model.Pergunta;
 import com.mycompany.show.model.User;
 import javax.swing.JOptionPane;
@@ -195,30 +196,39 @@ public class tela2 extends javax.swing.JFrame {
         if(botao1.isSelected()){
             if(num == 1){
                 JOptionPane.showMessageDialog(this, "RESPOSTA CORRETA");
+                UserController.adicionarPontos(user);
             }else{
                 JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");
+                UserController.derrota(user);
             }                
         }else if(botao2.isSelected()){
             if(num == 2){
                 JOptionPane.showMessageDialog(this, "RESPOSTA CORRETA");
+                UserController.adicionarPontos(user);
             }else{
                 JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");
+                UserController.derrota(user);
             }
         }else if(botao3.isSelected()){
             if(num == 3){
                 JOptionPane.showMessageDialog(this, "RESPOSTA CORRETA");
+                UserController.adicionarPontos(user);
             }else{
                 JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");
+                UserController.derrota(user);
             }
         }else if(botao4.isSelected()){
             if(num == 4){
                 JOptionPane.showMessageDialog(this, "RESPOSTA CORRETA");
+                UserController.adicionarPontos(user);
             }else{
                 JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");
+                UserController.derrota(user);
             }
         }else{
             JOptionPane.showMessageDialog(this, "Selecione uma resposta");
         }
+        achaPergunta();  
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -266,6 +276,7 @@ public class tela2 extends javax.swing.JFrame {
             botao4.setText(pergunt.getRespostas()[3]);
             num = pergunt.getOpção();
         }else{
+            new tela3(user).setVisible(true);
             this.dispose();
         }        
 
