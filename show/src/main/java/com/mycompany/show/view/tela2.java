@@ -4,17 +4,27 @@
  */
 package com.mycompany.show.view;
 
+import com.mycompany.show.controller.PerguntaController;
+import com.mycompany.show.controller.UserController;
+import com.mycompany.show.model.Pergunta;
+import com.mycompany.show.model.User;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author TALITANAIBERTDACOSTA
  */
 public class tela2 extends javax.swing.JFrame {
-
+    User user;
+    int num;
     /**
      * Creates new form tela2
      */
     public tela2() {
         initComponents();
+        User user = new User();
+        this.user = user;
+        achaPergunta();        
     }
 
     /**
@@ -69,8 +79,9 @@ public class tela2 extends javax.swing.JFrame {
                 .addContainerGap(44, Short.MAX_VALUE))
         );
 
+        botao1.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(botao1);
-        botao1.setForeground(new java.awt.Color(255, 255, 0));
+        botao1.setForeground(new java.awt.Color(255, 255, 255));
         botao1.setText("1");
         botao1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,29 +89,35 @@ public class tela2 extends javax.swing.JFrame {
             }
         });
 
+        botao2.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(botao2);
-        botao2.setForeground(new java.awt.Color(255, 255, 0));
+        botao2.setForeground(new java.awt.Color(255, 255, 255));
         botao2.setText("2");
 
+        botao3.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(botao3);
-        botao3.setForeground(new java.awt.Color(255, 255, 0));
+        botao3.setForeground(new java.awt.Color(255, 255, 255));
         botao3.setText("3");
 
+        botao4.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(botao4);
-        botao4.setForeground(new java.awt.Color(255, 255, 0));
+        botao4.setForeground(new java.awt.Color(255, 255, 255));
         botao4.setText("4");
 
         jButton1.setBackground(new java.awt.Color(0, 102, 0));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("confirmar??");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText(".");
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\git\\Show-do-Javao\\tumblr_mgtzqiFqqb1rrftcdo1_250.gif")); // NOI18N
-        jLabel3.setText("jLabel3");
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\git\\Show-do-Javao\\82ab054e-503f-4da0-84de-15a34fdcb562_mlvinedancebig.gif")); // NOI18N
-        jLabel4.setText("jLabel4");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -111,17 +128,12 @@ public class tela2 extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel3)
                         .addGap(17, 17, 17))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel2)
                         .addGap(303, 303, 303))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -180,6 +192,45 @@ public class tela2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botao1ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if(botao1.isSelected()){
+            if(num == 1){
+                JOptionPane.showMessageDialog(this, "RESPOSTA CORRETA");
+                UserController.adicionarPontos(user);
+            }else{
+                JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");
+                UserController.derrota(user);
+            }                
+        }else if(botao2.isSelected()){
+            if(num == 2){
+                JOptionPane.showMessageDialog(this, "RESPOSTA CORRETA");
+                UserController.adicionarPontos(user);
+            }else{
+                JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");
+                UserController.derrota(user);
+            }
+        }else if(botao3.isSelected()){
+            if(num == 3){
+                JOptionPane.showMessageDialog(this, "RESPOSTA CORRETA");
+                UserController.adicionarPontos(user);
+            }else{
+                JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");
+                UserController.derrota(user);
+            }
+        }else if(botao4.isSelected()){
+            if(num == 4){
+                JOptionPane.showMessageDialog(this, "RESPOSTA CORRETA");
+                UserController.adicionarPontos(user);
+            }else{
+                JOptionPane.showMessageDialog(this, "RESPOSTA ERRADA");                
+                UserController.derrota(user);
+            }
+        }else{
+            JOptionPane.showMessageDialog(this, "Selecione uma resposta");
+        }
+        achaPergunta();  
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -213,6 +264,26 @@ public class tela2 extends javax.swing.JFrame {
                 new tela2().setVisible(true);
             }
         });
+    }
+    
+    private void achaPergunta(){
+        if(user.isErro()){
+            new tela3(user).setVisible(true);
+            this.dispose();
+        }
+        Pergunta pergunt = PerguntaController.selecionar();
+        if(pergunt != null){            
+            pergunta.setText(pergunt.getPergunta());
+            botao1.setText(pergunt.getRespostas()[0]);
+            botao2.setText(pergunt.getRespostas()[1]);
+            botao3.setText(pergunt.getRespostas()[2]);
+            botao4.setText(pergunt.getRespostas()[3]);
+            num = pergunt.getOpção();
+        }else{
+            new tela3(user).setVisible(true);
+            this.dispose();
+        }        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

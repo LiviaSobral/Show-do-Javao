@@ -5,18 +5,33 @@
 package com.mycompany.show.controller;
 
 import com.mycompany.show.model.Pergunta;
+import com.mycompany.show.model.User;
+import static java.awt.image.ImageObserver.WIDTH;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
  * @author LIVIAHELOISAALVESSOB
  */
 public class PerguntaController {
-    public static ArrayList<Pergunta> perguntas;
+    private static ArrayList<Pergunta> perguntas = new ArrayList<>();
+    private static int numero = 0;
     
     public static Pergunta adicionar(String pergunta, String[] respostas, int correta){
         Pergunta perg = new Pergunta(correta,pergunta,respostas);
         perguntas.add(perg);
         return perg;
+    }
+    
+    public static Pergunta selecionar(){   
+        if(numero < 10){            
+            Pergunta pergunta = perguntas.get(numero);
+            numero ++;
+            return pergunta;
+        }else{
+            return null;
+        }                
     }
 }
